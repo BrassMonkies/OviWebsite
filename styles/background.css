@@ -1,0 +1,12 @@
+.main-background{
+    position: relative;
+    margin-top: 50px;
+    width: 100%;
+    object-fit: cover;
+
+    z-index: 0;
+}
+
+.main-image{
+    width: 100%;
+}

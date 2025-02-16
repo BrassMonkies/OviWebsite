@@ -1,0 +1,46 @@
+
+h1{
+    margin-top: 100px;
+    margin-bottom: 0px;
+    font-size: 60px;
+    text-decoration: underline;
+    text-decoration-thickness: 5px;
+}
+
+p{
+    margin: 0px;
+    /* border: 1px solid red; */
+}
+
+.records{
+    display: grid;
+    grid-template-columns: 1fr;
+
+    row-gap: 40px;
+    margin-top: 20px;
+
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.row1, .row2, .row3, .row4{
+    display: grid;
+    grid-template-columns: 1fr 200px 1fr;
+    column-gap: 20px;
+}
+
+.row2{
+    font-size: 80px;
+    font-weight: 1000;
+    
+}
+
+.row3{
+    font-size: 70px;
+    font-weight: 800;
+}
+
+.row4{
+    font-size: 60px;
+    font-weight: 600;
+}

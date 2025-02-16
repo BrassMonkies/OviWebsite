@@ -1,0 +1,10 @@
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    height: 5000px;
+    margin: 0;
+    background-color: #0f0f0f;
+}

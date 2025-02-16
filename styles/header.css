@@ -1,0 +1,365 @@
+.header{
+    height: 60px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    
+    background-color:rgb(26, 152, 236);
+    color: red;
+
+    font-weight: 700;
+
+    transition: padding-bottom 1s;
+}
+
+.header:hover{
+    padding-bottom: 25px;
+}
+
+/* Beginning of section left */
+
+.section-left{
+    display: flex;
+    justify-content: center;
+
+    width: 400px;
+
+    /* background-color: white; */
+}
+
+.about-button-container{
+    display: grid;
+    justify-content: center;
+
+    width: 79px;
+
+    /* border: 1px solid black; */
+}
+
+.about-button{
+    display: grid;
+    position: relative;
+    
+    width: 79px;
+    height: 50px;
+    margin-top: 5px;
+
+    border-radius: 20PX;
+    border: none;
+
+    background-color: black;
+
+    cursor: pointer;
+
+    z-index: 102;
+}
+
+.about-button:hover{
+    box-shadow: 0px 0px 2px 2px silver;
+}
+
+.about-button:active{
+    width: 77px;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+.about-button-image{
+    position: absolute;
+    width: 79px;
+    height: 50px;
+
+    object-fit: cover;
+
+    /* border: 1px solid red; */
+    border-radius: 20px;
+}
+
+.about-button-image:active{
+    width: 77px;
+}
+
+.section-left-text{ 
+    height: 22px;
+    width: 79px;
+
+    margin-top: -20px;
+
+    font-size: 20px;
+
+    color: rgb(0, 0, 0);
+    text-align: center;
+    text-decoration-line: underline;
+
+    opacity: 0;
+    transition: opacity 1s, margin-top 1s;
+
+    pointer-events: none;
+}
+
+.header:hover .section-left-text{
+    opacity: 1;
+    margin-top: 4px;
+} 
+
+/* Beginning of section center */
+
+.section-center{
+    display: flex;
+    justify-content: center;
+
+    width: 400px;
+
+    /* background-color: rgb(255, 255, 255); */
+
+    /* border: 1px solid red; */
+}
+
+.goal-button-container{
+    display: grid;
+    justify-content: center;
+
+
+    width: 79px;
+
+    
+    margin-top: 5px;
+
+    /* border: 1px solid blue; */
+}
+
+.goal-button{
+    position: relative;
+    margin-left: 12px;
+
+    background: rgb(0, 0, 0);
+    color: rgb(201, 201, 201);
+
+    width: 79px;
+    height: 50px;
+
+    cursor: pointer;
+
+    border: none;
+    border-radius: 20px;
+
+    z-index: 102;
+}
+
+.goal-light{
+    position: absolute;
+    width: 65px;
+    height: 37px;
+    padding: 6px;
+
+    top: 1px;
+    left: 1px;
+
+    /* border: 1px solid black; */
+    border-radius: 20px;
+    z-index: 102;
+
+}
+
+.goal-light:hover{
+
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50%, 59.99%{
+        opacity: 0.15;
+    }
+}
+
+.goal-button:hover{
+    
+    animation: blinker2 1s linear infinite;
+}
+
+@keyframes blinker2 {
+    0%{
+        background: linear-gradient(to right, black, black);
+    }
+
+    10%, 19.99%{
+        background: linear-gradient(to right, rgb(51, 0, 0), black);
+        box-shadow: -1px 0px 6px rgb(255, 0, 0)
+    }
+
+    20%, 29.99%{
+        background: linear-gradient(to right, rgb(102, 0, 0), black);
+        box-shadow: -2px 0px 6px rgb(255, 0, 0)
+    }
+
+    30%, 39.99%{
+        background: linear-gradient(to right, rgb(153, 0, 0), black);
+        box-shadow: -3px 0px 6px rgb(255, 0, 0)
+    }
+
+    40%, 49.99%{
+        background: linear-gradient(to right, rgb(204, 0, 0), black);
+        box-shadow: -4px 0px 6px rgb(255, 0, 0)
+    }
+
+    50%, 59.99%{
+        background: linear-gradient(to right, red, red);
+        box-shadow: 5px 0px 6px rgb(255, 0, 0), -5px 0px 6px rgb(255, 0, 0);
+    }
+
+    60%, 69.99%{
+        background: linear-gradient(to right, black, rgb(204, 0, 0));
+        box-shadow: 4px 0px 6px rgb(255, 0, 0)
+    }
+
+    70%, 79.99%{
+        background: linear-gradient(to right, black, rgb(153, 0, 0));
+        box-shadow: 3px 0px 6px rgb(255, 0, 0)
+    }
+
+    80%, 89.99%{
+        background: linear-gradient(to right, black, rgb(102, 0, 0));
+        box-shadow: 2px 0px 6px rgb(255, 0, 0)
+    }
+    
+    90%, 99.99%{
+        background: linear-gradient(to right, black, rgb(51, 0, 0));
+        box-shadow: 1px 0px 6px rgb(255, 0, 0)
+    }
+
+    100%{
+        background: linear-gradient(to right, black, black);
+    }
+}
+
+.goal-button:active{
+    width: 77px;
+    margin-left: 13px;
+    margin-right: 1px;
+}
+
+.goal-light:active{
+    width: 63px;
+    height: 35px;
+    top: 2px;
+}
+
+.section-center-text{
+    height: 22px;
+    width: 100px;
+
+    margin-top: -20px;
+    margin-left: 1px;
+
+    font-size: 20px;
+
+    color: rgb(0, 0, 0);
+    text-align: center;
+    text-decoration-line: underline;
+    text-wrap: nowrap;
+
+    opacity: 0;
+    transition: opacity 1s, margin-top 1s;
+
+    pointer-events: none;
+
+    /* border: 1px solid red; */
+}
+
+.header:hover .section-center-text{
+    opacity: 1;
+    margin-top: 4px;
+}
+
+/* Beginning of section right */
+
+.section-right{
+    display: flex;
+    justify-content: center;
+
+    width: 400px;
+
+    /* background-color: rgb(255, 255, 255); */
+}
+
+.awards-container{
+    display: grid;
+    justify-content: center;
+
+    width: 79px;
+
+}
+
+.awards-button{
+    display: grid;
+    position: relative;
+    
+    width: 79px;
+    height: 50px;
+    margin-top: 5px;
+
+    border-radius: 20PX;
+    border: none;
+
+    background-color: rgb(0, 0, 0);
+
+    cursor: pointer;
+
+    z-index: 102;
+}
+
+.awards-button:hover{
+    box-shadow: 0px 0px 1px 1px red, 0px 0px 1px 2px white, 0px 0px 1px 3px blue;
+}
+
+.awards-button:active{
+    width: 77px;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+.awards-button-image{
+    position: absolute;
+
+    height: 50px;
+    width: 79px;
+
+    border-radius: 20px;
+
+    object-fit: cover;
+    object-position: 0px 30%;
+}
+
+.awards-button-image:active{
+    width: 77px;
+}
+
+.section-right-text{
+    height: 22px;
+    width: 79px;
+
+    margin-top: -20px;
+
+    font-size: 20px;
+
+    color: rgb(0, 0, 0);
+    text-align: center;
+    text-decoration-line: underline;
+
+    opacity: 0;
+    transition: opacity 1s, margin-top 1s;
+
+    pointer-events: none;
+}
+
+.header:hover .section-right-text{
+    opacity: 1;
+    margin-top: 4px;
+}

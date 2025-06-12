@@ -28,6 +28,7 @@ function career_total(){
 
     //Sets HTML to Ovechkins career total goals
     document.getElementById("Ovtotalgoals").innerHTML = goals;
+    checkrecord(goals)
 
 })
   .catch((error) => console.error(error));
